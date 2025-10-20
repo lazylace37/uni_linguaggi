@@ -15,6 +15,7 @@
   paper: "a4",
   numbering: "1",
 )
+#show link: underline
 
 #set heading(numbering: "1.")
 
@@ -55,6 +56,13 @@
     )
   }),
 )
+
+#box(
+  inset: (y: 80pt),
+  [Nota: per una visualizzazione più efficace, gli esercizi sono stati anche
+    caricati in un repository Git all'indirizzo
+    #link("https://github.com/lazylace37/uni_linguaggi")],
+),
 
 #pagebreak()
 
