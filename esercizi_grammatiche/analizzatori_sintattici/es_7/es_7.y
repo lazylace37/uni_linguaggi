@@ -13,8 +13,10 @@
 %token THEN
 %token ELSE
 
+%left OP_EQUAL  // Ha la precedenza più bassa
 %left OP_PLUS OP_MINUS
 %left OP_TIMES
+%right ELSE     // Altrimenti la grammatica è ambigua per if-then if-then else
 
 %%
 input:
