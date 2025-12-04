@@ -1,13 +1,10 @@
-len :: [a] -> Integer
-len [] = 0
-len (x:xs) = 1 + len xs
-
 sumList :: Num a => [a] -> a
 sumList [] = 0
 sumList (x:xs) = x + sumList xs
 
 emptyList :: [a] -> Bool
-emptyList xs = len xs == 0
+emptyList [] = True
+emptyList _  = False
 
 allTrue :: [Bool] -> Bool
 allTrue [] = True
