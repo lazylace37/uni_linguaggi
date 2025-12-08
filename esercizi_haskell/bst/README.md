@@ -54,3 +54,23 @@ Es 11.
 ```
 ghci 11.hs -e "insert 6 t2"
 ```
+
+Es 12.
+```
+ghci 12.hs -e "diff2next t"
+```
+
+Es 13.
+```
+ghci 13.hs -e "level t"
+```
+
+Es 14.
+```
+ghci 14.hs -e "treeheight t"
+```
+
+Es 15.
+```
+ghci 15.hs -e "annotate t"
+```
