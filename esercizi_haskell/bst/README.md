@@ -74,3 +74,19 @@ Es 15.
 ```
 ghci 15.hs -e "annotate t"
 ```
+
+Es 16.
+```
+ghci 16.hs -e "almostBalanced t1"
+```
+
+Es 17.
+```
+ghci 17.hs -e "maxDiameter [t1,t2,t3]"
+```
+
+Es 18.
+```
+ghci 18.hs -e "isBST t2"
+ghci 18.hs -e "isBST t3"
+```
