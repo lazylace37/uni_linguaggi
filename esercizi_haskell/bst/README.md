@@ -96,3 +96,9 @@ Es 19.
 ghci 19.hs -e "isAVL t1"
 ghci 19.hs -e "isAVL t2"
 ```
+
+Es 20.
+```
+ghci 20.hs -e "isRBT t1"
+ghci 20.hs -e "isRBT t2"
+```
