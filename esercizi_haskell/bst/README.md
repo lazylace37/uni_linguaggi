@@ -90,3 +90,9 @@ Es 18.
 ghci 18.hs -e "isBST t2"
 ghci 18.hs -e "isBST t3"
 ```
+
+Es 19.
+```
+ghci 19.hs -e "isAVL t1"
+ghci 19.hs -e "isAVL t2"
+```
