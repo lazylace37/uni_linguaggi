@@ -25,3 +25,18 @@ Es 6.
 ```
 ghci 06.hs -e "simplify t1"
 ```
+
+Es 7.
+```
+ghci 07.hs -e "degree t1"
+```
+
+Es 8.
+```
+ghci 08.hs -e "transpose t1"
+```
+
+Es 10.
+```
+ghci 10.hs -e "normalize t1"
+```
