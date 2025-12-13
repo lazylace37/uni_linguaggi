@@ -40,3 +40,18 @@ Es 10.
 ```
 ghci 10.hs -e "normalize t1"
 ```
+
+Es 11.
+```
+ghci 11.hs -e "annotate t1"
+```
+
+Es 12.
+```
+ghci 12.hs -e "iscorrect t1"
+```
+
+Es 13.
+```
+ghci 13.hs -e "diameter t1"
+```
