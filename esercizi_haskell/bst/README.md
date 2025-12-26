@@ -102,3 +102,18 @@ Es 20.
 ghci 20.hs -e "isRBT t1"
 ghci 20.hs -e "isRBT t2"
 ```
+
+Es 21.
+```
+ghci 21.hs -e "bst2List t"
+```
+
+Es 22.
+```
+ghci 22.hs -e "filtertree (\x -> x \`mod\` 2 == 0) t"
+```
+
+Es 24.
+```
+ghci 24.hs -e "let d=d in limitedVisit 3 7 (Node 7 (Node 2 (Node d Void Void) Void) (Node d Void Void))"
+```
