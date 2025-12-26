@@ -22,3 +22,13 @@ Es 5.
 ```
 ghci 05.hs -e "calc [1..10]"
 ```
+
+Es 6.
+```
+ghci 06.hs -e "gen [1..10]"
+```
+
+Es 7.
+```
+ghci 07.hs -e "shiftToZero [5,4,2,6]"
+```
