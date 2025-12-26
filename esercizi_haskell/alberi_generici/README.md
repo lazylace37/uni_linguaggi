@@ -16,6 +16,11 @@ Es 3.
 ghci 03.hs -e "simplify t1"
 ```
 
+Es 4.
+```
+ghci 04.hs -e ""
+```
+
 Es 5.
 ```
 ghci 05.hs -e "height t1"
