@@ -1,7 +1,3 @@
-#import "@preview/codly:1.3.0": *
-#import "@preview/codly-languages:0.1.8": *
-#show: codly-init.with()
-
 #set document(
   title: "Esercizi su Haskell",
   author: "Gioele Vuaran (matricola 167222)",
@@ -81,13 +77,6 @@
 
 #outline()
 
-#codly(
-  languages: codly-languages,
-  number-format: none,
-  lang-format: none,
-  zebra-fill: none,
-)
-
 #let autobreak(content) = {
   layout(size => {
     let neededHeight = measure(block(width: size.width, content)).height
@@ -102,28 +91,57 @@
   })
 }
 
-#let show_file_aux(path, readme-path) = {
-  let filename = path.match(regex(".*/(.*)")).at("captures").at(0)
-  let contents = read(path)
-  let readme-contents = read(readme-path)
+#let show_file(path, readme-path) = {
+  autobreak({
+    let filename = path.match(regex(".*/(.*)")).at("captures").at(0)
+    let contents = read(path)
+    let readme-contents = read(readme-path)
 
-  heading(level: 2, "Esercizio " + filename)
+    heading(level: 2, "Esercizio " + filename)
 
-  raw(lang: "haskell", block: true, contents)
+    block(
+      width: 100%,
+      inset: 5pt,
+      stroke: .5pt + silver,
+      radius: 4pt,
+      {
+        raw(lang: "haskell", block: true, contents)
+      },
+    )
 
-  let command = readme-contents
-    .match(regex(
+    let areMatchesValid(matches) = {
+      for match in matches {
+        for capture in match.captures {
+          if capture.len() > 0 {
+            return true
+          }
+        }
+      }
+      return false
+    }
+
+    let matches = readme-contents.matches(regex(
       "ghci " + filename + " -e \"(.*)\"",
     ))
-    .at("captures")
-    .at(0)
-  if command.len() > 0 {
-    raw(lang: "haskell", block: true, command)
-  }
-}
-
-#let show_file(path, readme-path) = {
-  autobreak(show_file_aux(path, readme-path))
+    if areMatchesValid(matches) {
+      block(
+        width: 100%,
+        above: 5pt,
+        inset: 5pt,
+        stroke: .5pt + silver,
+        radius: 4pt,
+        {
+          for match in matches {
+            stack(dir: ttb, spacing: none, {
+              for command in match.captures {
+                raw(lang: "haskell", block: true, command)
+              }
+            })
+          }
+        },
+      )
+    }
+  })
 }
 
 = Numeri
