@@ -60,3 +60,13 @@ Es 13.
 ```
 ghci 13.hs -e "diameter t1"
 ```
+
+Es 15.
+```
+ghci 15.hs -e "preorder t1"
+```
+
+Es 16.
+```
+ghci 16.hs -e "frontier t1"
+```
