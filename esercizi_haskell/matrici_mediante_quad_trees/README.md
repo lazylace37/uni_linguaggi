@@ -23,3 +23,8 @@ Es 13.
 ```
 ghci 13.hs -e "transpose m"
 ```
+
+Es 15.
+```
+ghci 15.hs -e ""
+```
